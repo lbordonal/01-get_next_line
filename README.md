@@ -15,7 +15,7 @@ This repository contains coding developed at 42 Porto for get_next_line Project,
 </p>
 
 
-## :notebook: [Subject]() <br />
+## :notebook: [Subject](https://github.com/lbordonal/42-Cursus-01-get_next_line/blob/main/Subject/en.subject.pdf) <br />
 
 
 
