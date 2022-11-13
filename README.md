@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-This repository contains coding developed at 42 Porto for get_next_line Project, from 11/11/2022 to ...
+This repository contains code developed at 42 Porto for get_next_line Project, from 11/11/2022 to ...
 </p>
 
 
