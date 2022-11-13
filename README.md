@@ -6,8 +6,8 @@
 <p align="center">
 	<img src="https://img.shields.io/badge/score-not%20submitted-red" />
 	<img src="https://img.shields.io/github/languages/code-size/lbordonal/01-get_next_line" />
-	<img alt="Code language count" src="https://img.shields.io/github/languages/count/lbordonal/01-get_next_line" />
-	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/lbordonal/01-get_next_line" />
+	<img src="https://img.shields.io/github/languages/count/lbordonal/01-get_next_line" />
+	<img src="https://img.shields.io/github/languages/top/lbordonal/01-get_next_line" />
 	<img src="https://img.shields.io/github/last-commit/lbordonal/01-get_next_line" />
 </p>
 
