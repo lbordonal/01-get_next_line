@@ -6,7 +6,7 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:20:19 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/14 11:41:47 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/14 12:36:20 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ char	*get_next_line(int fd)
 	if (!list)
 		return (NULL);
 /* 2- Extrair de list para line */
-
+	get_line(list, &line);
 /* 3- Limpar a list */
-
+	clean_line(&list);
 	return (line);
 }
 
@@ -107,6 +107,106 @@ void	add_to_list(t_list **list, char *buffer, int readed)
 	}
 	last = ft_lstlast(list);
 	last->next = new;
+}
+
+/* get_line: pega os caracteres da list e coloca eles na line ate encontrar '\n' */
+void	get_line(t_list *list, char **line)
+{
+	int	i;
+	int	j;
+
+	j = 0;
+	if (!list)
+		return (NULL);
+	create_line(line, list);
+	if (!line)
+		return (NULL);
+	while (list)
+	{
+		i = 0;
+		while (list->content[i])
+		{
+			if (list->content[i] == '\n')
+			{
+				(*line)[j++] = list->content[i];
+				break ;
+			}
+			(*line)[j++] = list->content[i++];
+		}
+		list = list->next;
+	}
+	(*line)[j] = '\0';
+}
+
+/* create_line: calcula a quantidade de caracteres na line atual */
+void	create_line(char **line, t_list *list)
+{
+	int	i;
+	int	len;
+
+	i = 0;
+	len = 0;
+	while (list)
+	{
+		i = 0;
+		while (list->content[i])
+		{
+			if (list->content[i] == '\n')
+			{
+				len++;
+				break ;
+			}
+			len++;
+			i++;
+		}
+		list = list->next;
+	}
+	*line = malloc(sizeof(char) * (len + 1));
+}
+
+/* clean_line: depois de ler a line, limpamos ela para ter somente as proximas na list */
+void	clean_line(t_list **list)
+{
+	t_list	*last;
+	t_list	*clean_node;
+	int		i;
+	int		j;
+
+	clean_node = malloc(sizeof(t_list));
+	if (!list || !clean_node)
+		return (NULL);
+	clean_node->next = NULL;
+	last = ft_lstlast(*list);
+	i = 0;
+	while (last->content[i] && last->content != '\n')
+		i++;
+	if (last->content && last->content[i] == '\n')
+		i++;
+	clean_node->content = malloc(sizeof(char) * ((ft_strlen(last->content) - i) + 1));
+	if (clean_node->content == NULL)
+		return ;
+	j = 0;
+	while (last->content[i])
+		clean_node->content[j++] = last->content[i++];
+	clean_node->content[j] = '\0';
+	free_list(*list);
+	*list = clean_node;
+}
+
+/* free_list: limpa a lista inteira*/
+void	free_list(t_list *list)
+{
+	t_list	*current;
+	t_list	*next;
+
+	current = list;
+	while (current)
+	{
+		free(current->content);
+		next = current->next;
+		free(current);
+		current = next;
+	}
 }
 
 /* int	main(void)
