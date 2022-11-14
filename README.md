@@ -36,12 +36,13 @@ This repository contains code developed at 42 Porto for get_next_line Project, f
 	:trophy: Bonus Part
 </h2>
 
-<h3 align="left"> get_next_line.c </h3>
+<h3 align="left"> get_next_line_bonus.c </h3>
 
-`get_next_line` `read_and_save` `get_line` `ft_save`<br />
-<h3 align="left"> get_next_line_utils.c </h3>
+`get_next_line_bonus` `read_and_save` `get_line` `ft_save`<br />
+
+<h3 align="left"> get_next_line_utils_bonus.c </h3>
 
 `ft_strlen` `ft_strchr` `ft_strjoin` <br />
 
-<h3 align="left"> get_next_line.h </h3>
+<h3 align="left"> get_next_line_bonus.h </h3>
 </br>
