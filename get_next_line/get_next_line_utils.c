@@ -6,75 +6,70 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:22:00 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/14 11:33:27 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/14 15:37:26 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <fcntl.h>
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen(char *s)
 {
 	size_t	len;
 
 	len = 0;
-	while (s[len] != '\0')
+	while (s && s[len] && s[len] != '\n')
+		len++;
+	if (s && s[len] == '\n')
 		len++;
 	return (len);
 }
 
-void	*ft_strchr(const char *s, int c)
+int	ft_strchr(char *s, char c)
 {
 	int		i;
-	char	*str;
 
 	i = 0;
-	str = (char *)s;
-	while (s[i] != c)
-	{
-		if (s[i] == '\0')
-		{
-			return (NULL);
-		}
+	while (s && s[i] && s[i] != c)
 		i++;
-		str++;
-	}
-	return (str);
+	if (s && s[i] && s[i] == c)
+		return (i);
+	return (-1);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*new;
 	int		i;
 	int		j;
 
-	i = 0;
-	j = 0;
+	if (s2[0] == '\0')
+		return (0);
 	new = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!new)
 		return (NULL);
-	while (s1[i] != '\0')
+	i = 0;
+	while (s1 && s1[i])
 	{
-		new[i + j] = s1[i];
+		new[i] = s1[i];
 		i++;
 	}
-	while (s2[j] != '\0')
-	{
-		new[i + j] = s2[j];
-		j++;
-	}
-	new[i + j] = '\0';
+	while (s2 && s2[j] && s2[j] != '\n')
+		new[i++] = s2[j++];
+	if (s2[j] == '\n')
+		new[i++] = '\n';
+	new[i] = '\0';
+	if (s1)
+		free(s1);
 	return (new);
 }
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_strcpy(char *s1, char *s2)
 {
-	if (!lst)
-		return (NULL);
-	while (lst != NULL)
-	{
-		if (lst->next == NULL)
-			return (lst);
-		lst = lst->next;
-	}
-	return (lst);
+	size_t	i;
+
+	i = -1;
+	while (s2[++i])
+		s1[i] = s2[i];
+	s1[i] = '\0';
 }
