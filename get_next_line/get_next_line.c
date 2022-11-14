@@ -6,7 +6,7 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:20:19 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/14 16:58:52 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:22:34 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,3 +104,27 @@ char	*ft_save(char *save)
 	free(save);
 	return (str);
 }
+
+/* int	main(void)
+{
+	int		fd;
+	int		i;
+	char	*line;
+
+	fd = open("../tests/hp.txt", O_RDONLY);
+	i = 1;
+	while (i < 150)
+	{
+		line = get_next_line(fd);
+		printf("%s", "line ");
+		printf("%d", i);
+		printf("%s", ": ");
+		printf("%s", line);
+		if (!line[fd])
+			return (0);
+		free(line);
+		i++;
+	}
+	close(fd);
+	return (0);
+} */

@@ -6,11 +6,11 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:22:00 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/14 17:00:24 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:22:33 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(char *s)
 {

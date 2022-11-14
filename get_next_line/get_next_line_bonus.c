@@ -6,24 +6,24 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:20:19 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/14 17:00:26 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:22:22 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
-char	*get_next_line(int fd)
+char	*get_next_line_bonus(int fd)
 {
 	char		*line;
-	static char	*save;
+	static char	*save[ARRAY_MAX_SIZE];
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > ARRAY_MAX_SIZE)
 		return (0);
-	save = read_and_save(fd, save);
-	if (!save)
+	save[fd] = read_and_save(fd, save[fd]);
+	if (!save[fd])
 		return (NULL);
-	line = get_line(save);
-	save = ft_save(save);
+	line = get_line(save[fd]);
+	save[fd] = ft_save(save[fd]);
 	return (line);
 }
 
@@ -104,3 +104,28 @@ char	*ft_save(char *save)
 	free(save);
 	return (str);
 }
+
+int	main(void)
+{
+	int		fd;
+	int		i;
+	char	*line;
+
+	fd = open("../tests/hp.txt", O_RDONLY);
+	i = 1;
+	while (i < 150)
+	{
+		line = get_next_line_bonus(fd);
+		printf("%s", "line ");
+		printf("%d", i);
+		printf("%s", ": ");
+		printf("%s", line);
+		if (!line[fd])
+			return (0);
+		free(line);
+		i++;
+	}
+	close(fd);
+	return (0);
+}
+

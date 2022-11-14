@@ -6,7 +6,7 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:20:54 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/14 17:00:19 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:22:29 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,11 @@
 # include <ctype.h>
 # include <fcntl.h>
 
-char	*get_next_line(int fd);
+# ifndef ARRAY_MAX_SIZE
+#  define ARRAY_MAX_SIZE 4096
+# endif
+
+char	*get_next_line_bonus(int fd);
 char	*read_and_save(int fd, char *save);
 char	*get_line(char *save);
 char	*ft_save(char *save);
