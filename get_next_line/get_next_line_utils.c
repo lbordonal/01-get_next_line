@@ -6,7 +6,7 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:22:00 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/11 16:03:56 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/14 11:33:27 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	new[i + j] = '\0';
 	return (new);
+}
+
+t_list	*ft_lstlast(t_list *lst)
+{
+	if (!lst)
+		return (NULL);
+	while (lst != NULL)
+	{
+		if (lst->next == NULL)
+			return (lst);
+		lst = lst->next;
+	}
+	return (lst);
 }
