@@ -6,7 +6,7 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:33:12 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/14 16:24:02 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:59:04 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(void)
 	int		i;
 	char	*line;
 
-	fd = open("../tests/harrypotter.txt", O_RDONLY);
+	fd = open("../tests/hp.txt", O_RDONLY);
 	i = 1;
 	while (i < 150)
 	{
