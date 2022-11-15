@@ -6,7 +6,7 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:33:12 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/15 17:08:25 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/15 17:15:59 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,14 @@ int	main(void)
 	int		i;
 	char	*line;
 
-	fd = open("../tests/simpsons.txt", O_RDONLY);
+	fd = open("../tests/miranha.txt", O_RDONLY);
+	//fd = open("../tests/simpsons.txt", O_RDONLY);
 	//fd = open("../tests/hp.txt", O_RDONLY);
 	//fd = open("../tests/test1.txt", O_RDONLY);
 	//fd = open("../tests/big_line_with_nl", O_RDONLY);
 	//fd = open("../tests/big_line_no_nl", O_RDONLY);
 	i = 1;
-	while (i < 30)
+	while (i < 130)
 	{
 		line = get_next_line(fd);
 		printf("line [%02d]: %s", i, line);
