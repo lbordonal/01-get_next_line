@@ -15,53 +15,69 @@
 This repository contains code developed at 42 Porto for get_next_line Project, from 11/11/2022 to ...
 </p>
 
-
-## :notebook: [Subject](https://github.com/lbordonal/01-get_next_line/blob/main/Subject/en.subject.pdf) <br />
+<h2 align="left">
+	 :notebook: Subject
+</h2>
+<a href="https://github.com/lbordonal/01-get_next_line/blob/main/Subject/en.subject.pdf">Click here</a> for the subject of this project.
+<br /><br />
 
 
 <h2 align="left">
-	:keyboard: Function Prototype
+	:zap: Function Prototype
 </h2>
 
 ```c 
 char	get_next_line(int fd);
 
 ```
-
 <br />
 
 <h2 align="left">
-	:memo: Tests
+	:computer: Usage
 </h2>
 Compile with: </br>
-<code>cc -Wall -Werror -Wextra ../tests/main.c get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=XX</code>
+<code>cc -Wall -Werror -Wextra ../tests/main.c get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=size </code>
 
 <br /><br />
 
 <h2 align="left">
 	:medal_sports: Mandatory Part
 </h2>
-<h3 align="left"> get_next_line.c </h3>
 
-`get_next_line` `read_and_save` `get_line` `ft_save`<br />
-<h3 align="left"> get_next_line_utils.c </h3>
+**`get_next_line.c`**
 
-`ft_strlen` `ft_strchr` `ft_strjoin` `ft_calloc` <br />
+* `get_next_line`	- main function.
+* `read_and_save`	- takes the opened file descriptor and saves on a "buffer" variable what readed from it.
+* `get_line`		- extract the first line of the file.
+* `ft_save`		- stores the updated file with whatever is left from the original file, except the line extracted.
 
-<h3 align="left"> get_next_line.h </h3>
-</br>
+**`get_next_line_utils.c`**
+
+* `ft_strlen`		- find length of string.
+* `ft_strchr`		- find first occurence of a character in string.
+* `ft_strjoin`		- concatenate two strings into a new string using malloc to alocate memory.
+* `ft_calloc`		- allocates memory for an array with '/0'.
+
+**`get_next_line.h`**
+<br /><br />
 
 <h2 align="left">
 	:trophy: Bonus Part
 </h2>
 
-<h3 align="left"> get_next_line_bonus.c </h3>
+**`get_next_line_bonus.c`**
 
-`get_next_line_bonus` `read_and_save` `get_line` `ft_save`<br />
+* `get_next_line`	- main function with bonus part.
+* `read_and_save`	- takes the opened file descriptor and saves on a "buffer" variable what readed from it.
+* `get_line`		- extract the first line of the file.
+* `ft_save`		- stores the updated file with whatever is left from the original file, except the line extracted.
 
-<h3 align="left"> get_next_line_utils_bonus.c </h3>
+**`get_next_line_utils_bonus.c`**
 
-`ft_strlen` `ft_strchr` `ft_strjoin` `ft_calloc` <br />
+* `ft_strlen`		- find length of string.
+* `ft_strchr`		- find first occurence of a character in string.
+* `ft_strjoin`		- concatenate two strings into a new string using malloc to alocate memory.
+* `ft_calloc`		- allocates memory for an array with '/0'.
 
-<h3 align="left"> get_next_line_bonus.h </h3>
+**`get_next_line_bonus.h`**
 </br>
