@@ -6,7 +6,7 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:22:00 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/14 16:58:47 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:12:09 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,24 @@ char	*ft_strjoin(char *s1, char *s2)
 	str[ft_strlen(s1) + ft_strlen(s2)] = '\0';
 	free(s1);
 	return (str);
+}
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	char			*new;
+	size_t			i;
+	unsigned int	total;
+
+	i = 0;
+	total = nmemb * size;
+	new = malloc(total);
+	if (!new)
+		return (NULL);
+	while (total > 0)
+	{
+		new[i] = 0;
+		total--;
+		i++;
+	}
+	return ((void *)new);
 }

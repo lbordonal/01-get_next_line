@@ -6,7 +6,7 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:20:19 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/14 18:22:34 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/15 15:51:28 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,9 @@ char	*read_and_save(int fd, char *save)
 	char	*buffer;
 	int		read_bytes;
 
-	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
-	if (!buffer)
-		return (NULL);
+	buffer = ft_calloc((BUFFER_SIZE + 1), sizeof(char));
 	read_bytes = 1;
-	while (!ft_strchr(save, '\n') && read_bytes != 0)
+	while (!ft_strchr(save, '\n') && read_bytes > 0)
 	{
 		read_bytes = read(fd, buffer, BUFFER_SIZE);
 		if (read_bytes == -1)
@@ -54,29 +52,23 @@ char	*read_and_save(int fd, char *save)
 char	*get_line(char *save)
 {
 	int		i;
-	char	*str;
+	char	*line;
 
 	i = 0;
 	if (!save[i])
 		return (NULL);
 	while (save[i] && save[i] != '\n')
 		i++;
-	str = malloc(sizeof(char) * (i + 2));
-	if (!str)
-		return (NULL);
+	line = ft_calloc((i + 2), sizeof(char));
 	i = 0;
 	while (save[i] && save[i] != '\n')
 	{
-		str[i] = save[i];
+		line[i] = save[i];
 		i++;
 	}
 	if (save[i] == '\n')
-	{
-		str[i] = save[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+		line[i] = '\n';
+	return (line);
 }
 
 char	*ft_save(char *save)
@@ -93,14 +85,11 @@ char	*ft_save(char *save)
 		free(save);
 		return (NULL);
 	}
-	str = malloc(sizeof(char) * (ft_strlen(save) - i + 1));
-	if (!str)
-		return (NULL);
+	str = ft_calloc((ft_strlen(save) - i + 1), sizeof(char));
 	i++;
 	j = 0;
 	while (save[i])
 		str[j++] = save[i++];
-	str[j] = '\0';
 	free(save);
 	return (str);
 }
@@ -112,16 +101,14 @@ char	*ft_save(char *save)
 	char	*line;
 
 	fd = open("../tests/hp.txt", O_RDONLY);
+	fd = open("../tests/test1.txt", O_RDONLY);
+	fd = open("../tests/big_line_with_nl", O_RDONLY);
+	fd = open("../tests/big_line_no_nl", O_RDONLY);
 	i = 1;
-	while (i < 150)
+	while (i < 20)
 	{
 		line = get_next_line(fd);
-		printf("%s", "line ");
-		printf("%d", i);
-		printf("%s", ": ");
-		printf("%s", line);
-		if (!line[fd])
-			return (0);
+		printf("line [%02d]: %s", i, line);
 		free(line);
 		i++;
 	}
