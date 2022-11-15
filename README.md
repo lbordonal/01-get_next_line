@@ -19,12 +19,23 @@ This repository contains code developed at 42 Porto for get_next_line Project, f
 ## :notebook: [Subject](https://github.com/lbordonal/01-get_next_line/blob/main/Subject/en.subject.pdf) <br />
 
 <h2 align="left">
+	:keyboard: Function Prototype
+</h2>
+
+```c 
+char	get_next_line(int fd);
+
+```
+
+<br />
+
+<h2 align="left">
 	:memo: Tests
 </h2>
 Compile with: </br>
 <code>cc -Wall -Werror -Wextra ../tests/main.c get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=XX</code>
 
-<br />
+<br /><br />
 
 <h2 align="left">
 	:medal_sports: Mandatory Part
@@ -34,7 +45,7 @@ Compile with: </br>
 `get_next_line` `read_and_save` `get_line` `ft_save`<br />
 <h3 align="left"> get_next_line_utils.c </h3>
 
-`ft_strlen` `ft_strchr` `ft_strjoin` <br />
+`ft_strlen` `ft_strchr` `ft_strjoin` `ft_calloc` <br />
 
 <h3 align="left"> get_next_line.h </h3>
 </br>
@@ -49,7 +60,7 @@ Compile with: </br>
 
 <h3 align="left"> get_next_line_utils_bonus.c </h3>
 
-`ft_strlen` `ft_strchr` `ft_strjoin` <br />
+`ft_strlen` `ft_strchr` `ft_strjoin` `ft_calloc` <br />
 
 <h3 align="left"> get_next_line_bonus.h </h3>
 </br>
