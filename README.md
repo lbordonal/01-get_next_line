@@ -18,6 +18,13 @@ This repository contains code developed at 42 Porto for get_next_line Project, f
 
 ## :notebook: [Subject](https://github.com/lbordonal/01-get_next_line/blob/main/Subject/en.subject.pdf) <br />
 
+<h2 align="left">
+	:memo: Tests
+</h2>
+Compile with: </br>
+<code>cc -Wall -Werror -Wextra ../tests/main.c get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=XX</code>
+
+<br />
 
 <h2 align="left">
 	:medal_sports: Mandatory Part
