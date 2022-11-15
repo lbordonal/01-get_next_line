@@ -18,6 +18,7 @@ This repository contains code developed at 42 Porto for get_next_line Project, f
 
 ## :notebook: [Subject](https://github.com/lbordonal/01-get_next_line/blob/main/Subject/en.subject.pdf) <br />
 
+
 <h2 align="left">
 	:keyboard: Function Prototype
 </h2>
