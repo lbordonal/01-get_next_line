@@ -6,7 +6,7 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:20:19 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/15 15:54:32 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/16 10:49:05 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char	*read_and_save(int fd, char *save)
 	char	*buffer;
 	int		read_bytes;
 
+	if (ft_strchr(save, '\n'))
+		return (save);
 	buffer = ft_calloc((BUFFER_SIZE + 1), sizeof(char));
 	read_bytes = 1;
 	while (!ft_strchr(save, '\n') && read_bytes > 0)

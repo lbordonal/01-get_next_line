@@ -6,7 +6,7 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:33:12 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/16 10:39:10 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/16 10:54:08 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(void)
 	//fd = open("../tests/big_line_with_nl", O_RDONLY);
 	//fd = open("../tests/big_line_no_nl", O_RDONLY);
 	i = 1;
-	while (get_next_line(fd))
+	while (i < 135)
 	{
 		line = get_next_line(fd);
 		printf("line [%02d]: %s", i, line);
