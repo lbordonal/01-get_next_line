@@ -6,7 +6,7 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 13:33:12 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/16 10:54:08 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/17 14:46:00 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,15 @@ int	main(void)
 	int		i;
 	char	*line;
 
-	fd = open("../tests/miranha.txt", O_RDONLY);
-	//fd = open("../tests/simpsons.txt", O_RDONLY);
-	//fd = open("../tests/hp.txt", O_RDONLY);
-	//fd = open("../tests/test1.txt", O_RDONLY);
-	//fd = open("../tests/big_line_with_nl", O_RDONLY);
-	//fd = open("../tests/big_line_no_nl", O_RDONLY);
+	//fd = open("../Tests/files/miranha.txt", O_RDONLY);
+	//fd = open("../Tests//files/simpsons.txt", O_RDONLY);
+	fd = open("../Tests/files/hp.txt", O_RDONLY);
+	//fd = open("../Tests/files/hltv.txt", O_RDONLY);
+	//fd = open("../Tests/files/big_line_with_nl", O_RDONLY);
+	//fd = open("../Tests/files/big_line_no_nl", O_RDONLY);
 	i = 1;
-	while (i < 135)
+	while ((line = get_next_line(fd)))
 	{
-		line = get_next_line(fd);
 		printf("line [%02d]: %s", i, line);
 		free(line);
 		i++;

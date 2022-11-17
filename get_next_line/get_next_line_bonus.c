@@ -6,7 +6,7 @@
 /*   By: lbordona <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:20:19 by lbordona          #+#    #+#             */
-/*   Updated: 2022/11/15 15:54:40 by lbordona         ###   ########.fr       */
+/*   Updated: 2022/11/17 14:20:46 by lbordona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*save[4096];
+	static char	*save[FOPEN_MAX];
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 4096)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > FOPEN_MAX)
 		return (0);
 	save[fd] = read_and_save(fd, save[fd]);
 	if (!save[fd])
