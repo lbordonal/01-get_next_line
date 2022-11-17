@@ -36,7 +36,7 @@ char	get_next_line(int fd);
 	:computer: Usage
 </h2>
 Compile with: </br>
-<code>cc -Wall -Werror -Wextra ../Tests/files/main.c get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=size </code>
+<code>cc -Wall -Werror -Wextra ../Tests/main.c get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=size </code>
 
 <br /><br />
 
