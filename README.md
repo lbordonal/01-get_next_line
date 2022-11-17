@@ -26,7 +26,7 @@ This repository contains code developed at 42 Porto for get_next_line Project, f
 	:zap: Function Prototype
 </h2>
 
-```c 
+```c
 char	get_next_line(int fd);
 
 ```
@@ -36,7 +36,7 @@ char	get_next_line(int fd);
 	:computer: Usage
 </h2>
 Compile with: </br>
-<code>cc -Wall -Werror -Wextra ../tests/main.c get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=size </code>
+<code>cc -Wall -Werror -Wextra ../Tests/files/main.c get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=size </code>
 
 <br /><br />
 
