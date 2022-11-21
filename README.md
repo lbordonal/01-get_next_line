@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-	<img src="https://img.shields.io/badge/score-not%20submitted-red" />
+	<img src="https://img.shields.io/badge/score-125%20%2F%20100-success" />
 	<img src="https://img.shields.io/github/languages/code-size/lbordonal/01-get_next_line" />
 	<img src="https://img.shields.io/github/languages/count/lbordonal/01-get_next_line" />
 	<img src="https://img.shields.io/github/languages/top/lbordonal/01-get_next_line" />
@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-This repository contains code developed at 42 Porto for get_next_line Project, from 11/11/2022 to ...
+This repository contains code developed at 42 Porto for get_next_line Project, from 11/11/2022 to 21/11/2022.
 </p>
 
 <h2 align="left">
