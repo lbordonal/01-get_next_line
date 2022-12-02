@@ -40,7 +40,7 @@ Compile with: </br>
 
 If you not set ```BUFFER_SIZE```, it will run with ``` BUFFER_SIZE=42 ``` pre-defined at **`get_next_line.h`**.
 
-<br /><br />
+<br />
 
 <h2 align="left">
 	:medal_sports: Mandatory Part
@@ -82,4 +82,13 @@ If you not set ```BUFFER_SIZE```, it will run with ``` BUFFER_SIZE=42 ``` pre-de
 * `ft_calloc`		- allocates memory for an array with '/0'.
 
 **`get_next_line_bonus.h`**
-</br>
+</br><br />
+
+<h2 align="left">
+	:memo: Testers
+</h2>
+
+- [gnlTester][1]
+
+[1]: https://github.com/Tripouille/gnlTester
+
