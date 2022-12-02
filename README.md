@@ -85,7 +85,7 @@ If you not set ```BUFFER_SIZE```, it will run with ``` BUFFER_SIZE=42 ``` pre-de
 </br><br />
 
 <h2 align="left">
-	:memo: Testers
+	:memo: Tester
 </h2>
 
 - [gnlTester][1]
