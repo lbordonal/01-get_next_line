@@ -38,10 +38,16 @@ char	get_next_line(int fd);
 1- Clone this repository: </br>
 <code> git clone https://github.com/lbordonal/01-get_next_line.git </code> </br></br>
 
-2- Compile with: </br>
+2- Navigate to get_next_line folder: </br>
+<code>cd 01-get_next_line/get_next_line/ </code><br /><br />
+
+3- Compile with: </br>
 <code>cc -Wall -Werror -Wextra ../Tests/main.c get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=size </code><br /><br />
 
-If you not set ```BUFFER_SIZE```, it will run with ``` BUFFER_SIZE=42 ``` pre-defined at **`get_next_line.h`**.
+If you do not set ```BUFFER_SIZE```, it will run with ``` BUFFER_SIZE=42 ``` pre-defined at **`get_next_line.h`**.
+
+4- Run with: </br>
+<code> ./a.out </code>
 
 <br />
 
