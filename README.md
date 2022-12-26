@@ -35,7 +35,10 @@ char	get_next_line(int fd);
 <h2 align="left">
 	:computer: Usage
 </h2>
-Compile with: </br>
+1- Clone this repository: </br>
+<code> git clone https://github.com/lbordonal/01-get_next_line.git </code> </br></br>
+
+2- Compile with: </br>
 <code>cc -Wall -Werror -Wextra ../Tests/main.c get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=size </code><br /><br />
 
 If you not set ```BUFFER_SIZE```, it will run with ``` BUFFER_SIZE=42 ``` pre-defined at **`get_next_line.h`**.
