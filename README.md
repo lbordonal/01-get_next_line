@@ -1,14 +1,13 @@
-
-<h1 align="center">
-	42-Cursus - get_next_line
-</h1>
+<p align="center">
+  <img src="https://github.com/lbordonal/lbordonal/blob/main/.images/get_next_line.png">
+</p>
 
 <p align="center">
-	<img src="https://img.shields.io/badge/score-125%20%2F%20100%20%E2%98%85-9cf" />
-	<img src="https://img.shields.io/github/languages/code-size/lbordonal/01-get_next_line" />
-	<img src="https://img.shields.io/github/languages/count/lbordonal/01-get_next_line" />
-	<img src="https://img.shields.io/github/languages/top/lbordonal/01-get_next_line" />
-	<img src="https://img.shields.io/github/last-commit/lbordonal/01-get_next_line" />
+	<img src="https://img.shields.io/badge/score-125%20%2F%20100%20%E2%98%85-9cf?style=for-the-badge" />
+	<img src="https://img.shields.io/github/languages/code-size/lbordonal/01-get_next_line?style=for-the-badge" />
+	<img src="https://img.shields.io/github/languages/count/lbordonal/01-get_next_line?style=for-the-badge" />
+	<img src="https://img.shields.io/github/languages/top/lbordonal/01-get_next_line?style=for-the-badge" />
+	<img src="https://img.shields.io/github/last-commit/lbordonal/01-get_next_line?style=for-the-badge" />
 </p>
 
 <p align="center">
@@ -26,10 +25,9 @@ This repository contains code developed at 42 Porto for get_next_line Project, f
 	:zap: Function Prototype
 </h2>
 
-```c
-char	get_next_line(int fd);
-
-```
+<p align="left">
+  <img src="https://github.com/lbordonal/lbordonal/blob/main/.images/get_next_line_function.png">
+</p>
 <br />
 
 <h2 align="left">
