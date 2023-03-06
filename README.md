@@ -14,7 +14,9 @@
 This repository contains code developed at 42 Porto for get_next_line Project, from 11/11/2022 to 21/11/2022.
 </p>
 
-<h2 align="left">
+
+<img src="https://github.com/lbordonal/lbordonal/blob/main/.42_badges/get_next_linem.png" align="right" />
+<h2>
 	 :notebook: Subject
 </h2>
 <a href="https://github.com/lbordonal/01-get_next_line/blob/main/Subject/en.subject.pdf">Click here</a> for the subject of this project.
