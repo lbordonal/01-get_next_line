@@ -28,7 +28,6 @@ This repository contains code developed at 42 Porto for get_next_line Project, f
 <p align="left">
   <img src="https://github.com/lbordonal/lbordonal/blob/main/.images/get_next_line_function.png">
 </p>
-<br />
 
 <h2 align="left">
 	:computer: Usage
